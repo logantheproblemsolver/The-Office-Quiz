@@ -30,3 +30,32 @@
     border-radius: 5%;
 
 }
+
+
+.incorrect {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.wrongAnswer {
+    margin-top: 7%;
+}
+
+
+.correct {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.correctAnswer {
+    margin-top: 7%;
+}
+
+.Andy {
+    height: 500px;
+    width: 600px;
+}
