@@ -6,7 +6,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    background-image: url("Background.jpg");
+    background: url("Background.jpg") #77E6FF;
     background-position: center;
     background-repeat: no-repeat;
     height: 800px;
@@ -15,7 +15,7 @@
 #quizStarter {
     margin: 400px auto;
     padding-top: 30px;
-    width: 700px;   
+    width: 700px;       
     color:white;
     font-style: bold; 
 }
