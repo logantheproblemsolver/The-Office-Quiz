@@ -6,7 +6,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    background: url("Background.jpg") #77E6FF;
     background-position: center;
     background-repeat: no-repeat;
     height: 800px;
@@ -16,7 +15,6 @@
     margin: 400px auto;
     padding-top: 30px;
     width: 700px;       
-    color:white;
     font-style: bold; 
 }
 
