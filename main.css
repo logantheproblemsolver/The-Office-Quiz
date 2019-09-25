@@ -1,29 +1,48 @@
 * {
     box-sizing: border-box; 
-}
+}   
 
 .container {
     text-align: center;
     display: flex;
     flex-direction: column;
-    background: aqua;
     height: 600px;
     padding: 200px;
+    background: url(MichaelBackground.jpg);
+
 }
 
 
 #quizStarter {     
-    font-style: bold; 
+    font-style: bold;
+    font-size: 24px; 
+    width: 300px;
+    justify-content: center;
+    position: relative;
+    top: 100px; 
+    left: 400px;
 }
 
+.question {
+    font-style: bold;
+    font-size: 24px; 
+    width: 475px;
+    justify-content: center;
+    position: relative;
+    top: 100px; 
+    left: 300px;
+    background: none;
+    flex-direction: row;
+    flex-flow: wrap;
+}
 
 .button {
     padding: 5px;
-    color: black;
+    color: white;
     border: 1px solid black;
     border-radius: 10%;
     box-shadow: 0 3px gray;
-    background-color: greenyellow;
+    background: black;
 }
 
 .buttonChoices {

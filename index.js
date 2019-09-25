@@ -127,9 +127,11 @@ function startQuiz() {
 function showAnswer() {
     $('.question').on('click', '#theAnswerButton', function (q) {
         q.preventDefault();
+        
         if (!$('input[name="question"]').is(':checked')) {
             alert('Please select an option')
         } else {
+            $('.question').hide();
             $('.question').find('.answerButton').hide();
             $('.answer').show();
             let radioValue = $('input[name="question"]:checked').val();
@@ -148,11 +150,13 @@ function showAnswer() {
 function nextQuestion() {
     $('.answer').on('click', '#nextQuestion', function (n) {
         n.preventDefault();
+        
         if (numberQuestion >= 10) {
             completeQuiz();
         } else {
             $('.answer').val = '';
             $('.answer').hide();
+            $('.question').show();
             let quizQuestion = generateQuizQuestions();
             updateScore();
             $('.question').html(quizQuestion);
