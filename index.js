@@ -46,11 +46,12 @@ let QUESTIONS = [
         'correctAnswer': 'Devon'
     },
     
-    {   'question': 'Why did Michael wait until Halloween to fire someone?',
+    {   'question': 'Why did Michael wait until Halloween to fire Devon?',
         'choice1': 'It\'s really scary stuff',
         'choice2': 'It was time to finally fire him',
         'choice3': 'I felt like it',
-        'choice4': 'Jan made me do it',
+        'choice4': 'Dwight didn\'t like him',
+        'correctAnswer': 'It\'s really scary stuff'
     },
     
     {   'question': 'How much money does Nelly give Darrel to buy tacos at the animal fundraiser?',
