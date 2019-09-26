@@ -187,22 +187,25 @@ function completeQuiz() {
         scoreLevelString = `<p>You truly are an Office Fan! How many times have you watched the show?</p>`
     }
     $('.question').html(scoreLevelString);
-    $('.question').append('<button type="button" id="restartQuiz">Try Quiz Again</button>');
+    $('.question').append('<button type="button" id="restartQuiz" class="button">Try Quiz Again</button>');
     scoreLevel();
     $('.answer').hide();
-
+    $('.question').show();
     $('.question').on('click', '#restartQuiz', function (r) {
         r.preventDefault();
         testScore = 0;
         numberQuestion = 0;
         $('.container').html(`
+        <div class="quiz">
             <h1>The Office Trivia</h1>
-        <section="quizStarter">
-            <p> Do you think you're the most knowledgeable on The Office? Have you seen all the shows 12 times like a true fan? Come and test your knowledge! </p>
-            <button id="startButton" type="button" class="startButton button">Start</button>
-        </section>
-        <section class="question"></section>
-        <section class="answer"></section>
+            <section class="testScore"></section>
+            <section id="quizStarter">
+                <p>Do you think you're the most knowledgeable on The Office? Have you seen all the shows 12 times like a true fan? Come and test your knowledge!</p>
+                <button id="startButton" class="startButton button">Start</button>
+            </section>
+            <section class="question"></section>
+            <section class="answer"></section>
+        </div>
         `);
         handleQuiz();
     });
