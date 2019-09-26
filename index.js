@@ -95,17 +95,16 @@ let numberQuestion = 0;
 let testScore = 0;
 
 function generateQuizQuestions() {
-    console.log(numberQuestion);
     const quizQuestion = `
-    <section>
-        <p>Question ${questionNumber += 1}</p>
+    <section class="question">
+        <p>Question ${questionNumber += 1}/10</p>
         <form id='multipleChoice'>
             <legend>${QUESTIONS[numberQuestion].question}</legend>
-            <div class='buttonChoices'>
-                <input type="radio" id='${QUESTIONS[numberQuestion].choice1}'  name= 'question' value="${QUESTIONS[numberQuestion].choice1}"><label for='${QUESTIONS[numberQuestion].choice1}'>${QUESTIONS[numberQuestion].choice1}</label>
-                <input type="radio" id='${QUESTIONS[numberQuestion].choice2}'  name= 'question' value="${QUESTIONS[numberQuestion].choice2}"><label for='${QUESTIONS[numberQuestion].choice2}'>${QUESTIONS[numberQuestion].choice2}</label>
-                <input type="radio" id='${QUESTIONS[numberQuestion].choice3}'  name= 'question' value="${QUESTIONS[numberQuestion].choice3}"><label for='${QUESTIONS[numberQuestion].choice3}'>${QUESTIONS[numberQuestion].choice3}</label>
-                <input type="radio" id='${QUESTIONS[numberQuestion].choice4}'  name= 'question' value="${QUESTIONS[numberQuestion].choice4}"><label for='${QUESTIONS[numberQuestion].choice4}'>${QUESTIONS[numberQuestion].choice4}</label>
+            <div id='buttonChoices'>
+                <label><input type="radio" id='${QUESTIONS[numberQuestion].choice1}'  name= 'question' value="${QUESTIONS[numberQuestion].choice1}">${QUESTIONS[numberQuestion].choice1}</label>
+                <label><input type="radio" id='${QUESTIONS[numberQuestion].choice2}'  name= 'question' value="${QUESTIONS[numberQuestion].choice2}">${QUESTIONS[numberQuestion].choice2}</label>
+                <label><input type="radio" id='${QUESTIONS[numberQuestion].choice3}'  name= 'question' value="${QUESTIONS[numberQuestion].choice3}">${QUESTIONS[numberQuestion].choice3}</label>
+                <label><input type="radio" id='${QUESTIONS[numberQuestion].choice4}'  name= 'question' value="${QUESTIONS[numberQuestion].choice4}">${QUESTIONS[numberQuestion].choice4}</label>
             </div>
             <div class='answerButton'>
                 <button type='submit' id='theAnswerButton' class="button">Answer</button>
@@ -166,7 +165,7 @@ function nextQuestion() {
 }
 
 function updateScore() {
-    $('.testScore').html(`<p>Current score is ${testScore}/100</p>`)
+    $('.testScore').html(`<p class="testScore">Current score is ${testScore}/100</p>`)
 }
 
 function scoreLevel() {

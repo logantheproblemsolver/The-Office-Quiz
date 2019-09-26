@@ -6,46 +6,63 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    padding-top: 200px;
     height: 600px;
-    padding: 200px;
-    background: url(MichaelBackground.jpg);
-
+    background: url(MichaelBackground.jpg) gray;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-
-#quizStarter {     
+.quiz {
+    text-align: center;   
     font-style: bold;
     font-size: 24px; 
     width: 300px;
-    justify-content: center;
     position: relative;
-    top: 100px; 
-    left: 400px;
+    top: -50px; 
+    left: 200px;
+}
+
+#quizStarter {  
+    text-align: center;
 }
 
 .question {
     font-style: bold;
     font-size: 24px; 
-    width: 475px;
-    justify-content: center;
     position: relative;
-    top: 100px; 
-    left: 300px;
     background: none;
-    flex-direction: row;
-    flex-flow: wrap;
+
+}
+
+.testScore {
+    font-size: 24px;
 }
 
 .button {
+    text-align: center;
+    font-size: 14px;
     padding: 5px;
     color: white;
     border: 1px solid black;
     border-radius: 10%;
-    box-shadow: 0 3px gray;
+    box-shadow: 0 4px gray;
     background: black;
+    cursor: pointer;
+    height: 38px;
+    width: 68px;
 }
 
-.buttonChoices {
+label {
     padding-top: 10px;
     padding-bottom: 15px;
+    display: block;
+    text-align: left;
 }
+
+@media only screen and (max-width: 1000px) {
+    .quiz {
+        flex: auto;       
+}
+}
+ 
