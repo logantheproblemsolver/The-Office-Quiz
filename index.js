@@ -116,7 +116,7 @@ function generateQuizQuestions() {
 
 function startQuiz() {
     let quizQuestion = generateQuizQuestions();
-    $('#quizStarter').on('click', '#startButton', function (s) {
+    $('#quizStarter').on('click', '.startButton', function (s) {
         s.preventDefault();
         $('.h1').html(`Quesion ${numberQuestion + 1}`);
         $('#quizStarter').hide();
@@ -173,29 +173,33 @@ function scoreLevel() {
 }
 
 function completeQuiz() {
-    $('.h1').html(`You got ${testScore}/10!`)
+    $('h1').html(`You got ${testScore}/10!`)
     $('.testScore').hide();
     let scoreLevelString = '';
     if (testScore < 50) {
+        console.log('less than 50')
         scoreLevelString = `<p>Kevin can do better than that!</p>`
     } else if (testScore < - 50 && testScore < 80) {
+        console.log('between 50 and 80')
         scoreLevelString = `<p>Maybe.. Just Maybe you might be an Office fan</p>`
     } else if (testScore >= 80) {
+        console.log('above 80')
         scoreLevelString = `<p>You truly are an Office Fan! How many times have you watched the show?</p>`
     }
     $('.question').html(scoreLevelString);
     $('.question').append('<button type="button" id="restartQuiz">Try Quiz Again</button>');
     scoreLevel();
     $('.answer').hide();
-    $('.question').on('click', '#restartQuiz', function () {
-        event.preventDefault();
+
+    $('.question').on('click', '#restartQuiz', function (r) {
+        r.preventDefault();
         testScore = 0;
         numberQuestion = 0;
         $('.container').html(`
             <h1>The Office Trivia</h1>
         <section="quizStarter">
             <p> Do you think you're the most knowledgeable on The Office? Have you seen all the shows 12 times like a true fan? Come and test your knowledge! </p>
-            <button id="startButton" type="button" class="button">Start</button>
+            <button id="startButton" type="button" class="startButton button">Start</button>
         </section>
         <section class="question"></section>
         <section class="answer"></section>

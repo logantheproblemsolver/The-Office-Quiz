@@ -18,8 +18,8 @@
     font-style: bold;
     font-size: 24px; 
     width: 300px;
-    position: relative;
-    top: -50px; 
+    position: fixed;
+    top: 25px; 
     left: 200px;
 }
 
@@ -60,9 +60,17 @@ label {
     text-align: left;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
     .quiz {
         flex: auto;       
 }
+}
+
+@media only screen and (max-width: 699px){
+    .quiz {
+        position: fixed; 
+        left: 20px;
+        top: 40px;
+    }
 }
  

@@ -1,14 +1,5 @@
-The theme of this quiz is The Office. 
+This web application is to show an interactive quiz application. 
 
-The questions and answers to the questions are as follows: 
+This is 'The Office' themed quiz. 
 
-What is Dwight's last name?
-    Schrute
-What is Jim's last name?    
-    Halpert
-Who was Pam first engaged to?
-    Roy
-Who did Micheal Scott hit with a car?
-    Meredith
-What did Andy call Jim?
-    Tuna
+This quiz really helped to debug code, and figure out how to write more effective code in CSS and JavaScript.
