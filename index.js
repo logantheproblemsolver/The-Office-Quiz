@@ -195,6 +195,7 @@ function completeQuiz() {
         r.preventDefault();
         testScore = 0;
         numberQuestion = 0;
+        questionNumber= 0;
         $('.container').html(`
         <div class="quiz">
             <h1>The Office Trivia</h1>
@@ -212,6 +213,8 @@ function completeQuiz() {
 }
 
 
+
+
 function runQuiz() {
     showAnswer();
     nextQuestion();
@@ -222,6 +225,7 @@ function runQuiz() {
 function handleQuiz() {
     startQuiz();
     runQuiz();
+
 }
 
 
